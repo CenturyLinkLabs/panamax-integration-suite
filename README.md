@@ -7,6 +7,8 @@ panamax-integration-suite
 * Bundler
 
 ###Install###
-"gem install bundler"
-"bundle install"
-"rspec spec"
+```
+gem install bundler
+bundle install
+rspec spec
+```
