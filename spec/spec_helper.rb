@@ -1,9 +1,12 @@
 require 'rspec'
 require 'capybara'
 require 'capybara/dsl'
+require 'capybara-webkit'
 
 Capybara.default_driver = :selenium
-Capybara.app_host = 'http://63.128.180.11:8898'
+Capybara.javascript_driver = :webkit
+Capybara.app_host = 'http://localhost:8898'
+Capybara.default_wait_time = 10
 
 RSpec.configure do |config|
   config.include Capybara::DSL
