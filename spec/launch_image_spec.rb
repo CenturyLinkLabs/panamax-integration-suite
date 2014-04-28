@@ -19,12 +19,10 @@ describe 'Launch an image' do
 
   it 'allows users to launch an image' do
     
-    within 'div.search-result-item.image-result', text: 'General use Ubuntu base image.' do
+    within 'div.search-result-item.image-result', text: 'Official Ubuntu base image' do
     	expect(page).to have_content "ubuntu"
     	click_on('Run Image')
     end
     
-    expect(page).to have_content 'good job, you created an app'
-
-  end
+    expect(page).to have_content 'ubuntu'  end
 end

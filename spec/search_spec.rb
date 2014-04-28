@@ -12,7 +12,7 @@ describe 'Search Workflow', :js => true do
 
     fill_in 'search_form_query', with: 'ubuntu'
 
-    expect(page).to have_content "General use Ubuntu base image."
+    expect(page).to have_content "Official Ubuntu base image"
   end
 
   it 'allows users to search for a local registry term', :driver => :webkit do

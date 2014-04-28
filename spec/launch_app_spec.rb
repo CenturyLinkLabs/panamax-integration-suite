@@ -23,7 +23,9 @@ describe 'Launch an application' do
     	click_on('Run Template')
     end
     
-    expect(page).to have_content 'good job, you created an app'
+    expect(page).to have_content('Wordpress')
+    expect(page).to have_selector('div.category-panel')
+    expect(page).to have_content('Web Tier')
 
   end
 end
