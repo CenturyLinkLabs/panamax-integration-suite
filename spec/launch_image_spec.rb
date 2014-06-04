@@ -5,24 +5,21 @@ describe 'Launch an image' do
     visit('/')
 
     within 'li.search-link' do
-    	click_on('Search')    	
-    end 
+      click_on('Search')
+    end
 
     expect(current_path).to eq('/search/new')
 
     fill_in 'search_form_query', with: 'ubuntu'
-
-    within 'form' do
-        click_on('Search')
-    end
   end
 
   it 'allows users to launch an image' do
-    
+
     within 'div.search-result-item.image-result', text: 'Official Ubuntu base image' do
-    	expect(page).to have_content "ubuntu"
-    	click_on('Run Image')
+      expect(page).to have_content "ubuntu"
+      click_on('Run Image')
     end
-    
-    expect(page).to have_content 'ubuntu'  end
+
+    expect(page).to have_content 'ubuntu'
+  end
 end
